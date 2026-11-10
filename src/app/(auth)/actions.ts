@@ -1,5 +1,6 @@
 "use server";
 
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { safeNextPath } from "@/lib/security/route-access";
@@ -58,7 +59,10 @@ export async function signup(_prev: AuthFormState, formData: FormData): Promise<
   }
   if (!isSupabaseConfigured()) return { error: SUPABASE_NOT_CONFIGURED_MESSAGE, values };
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") || "http://localhost:3000";
+  // The confirmation link returns to the site the person signed up on. Next.js
+  // has already checked that this form was posted from our own origin, and
+  // Supabase only accepts redirect addresses on its allow-list.
+  const appUrl = (await headers()).get("origin") || process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") || "http://localhost:3000";
   const supabase = await createClient();
   const { data, error } = await supabase.auth.signUp({
     email: parsed.data.email,
