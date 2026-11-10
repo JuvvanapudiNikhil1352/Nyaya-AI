@@ -11,6 +11,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check:env": "node --env-file=.env.local scripts/check-env.mjs",
+    "check:auth-link": "node --env-file=.env.local scripts/check-auth-link.mjs",
     "test:integration": "node --env-file=.env.local ./node_modules/vitest/vitest.mjs run -c vitest.integration.config.mts",
     "db:push": "node --env-file=.env.local scripts/db-push.mjs",
     "samples": "node scripts/make-sample-docs.mjs",

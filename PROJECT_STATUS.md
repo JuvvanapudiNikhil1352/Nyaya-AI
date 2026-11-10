@@ -22,7 +22,7 @@ Phase order follows the original specification. The financial engine stays at Ph
 | 12 | Resolution selection and action plans | ✅ Complete — automated checks pass; manual test skipped by user (time) |
 | 13 | Document generation | ⏸ Deferred by user (2026-11-11) — Drafts page shows "Coming soon"; no feature promises drafts |
 | 14 | Testing and security review | ✅ Complete — all tests pass, production build succeeds, review in `docs/security.md` |
-| 15 | Deployment | Pending |
+| 15 | Deployment | ✅ Live at https://nyaya-ai-plum.vercel.app (Vercel, from GitHub `main`) |
 
 ## What exists
 
@@ -158,6 +158,14 @@ Phase order follows the original specification. The financial engine stays at Ph
 - **Account deletion** (Settings → type DELETE): uploaded files removed first, then the login; all rows go by cascade. `src/lib/supabase/admin.ts` (service role, used only for this).
 - First **production build** (`npm run build`): succeeds, 22 pages. Production server check: headers present, logged-out → redirect/401, cross-site and no-origin uploads → 403.
 
+**Phase 15**
+- Code on GitHub: https://github.com/JuvvanapudiNikhil1352/Nyaya-AI (public, branch `main`). Vercel deploys automatically on every push.
+- **Live app: https://nyaya-ai-plum.vercel.app**
+- Signup confirmation link now uses the address the person signed up on (request origin, already checked by Next.js), so it no longer depends on `NEXT_PUBLIC_APP_URL` being set at build time.
+- Supabase → Authentication → URL Configuration: Site URL and Redirect URLs must list the live address. `npm run check:auth-link -- <live-url>` tests the real confirmation link without sending email (it creates and deletes a throwaway user).
+- Issue found and fixed during deployment: Supabase's Site URL pointed to a Vercel address that didn't exist, so confirmation links showed "deployment not found".
+- Vercel's per-deployment addresses (e.g. `nyaya-xxxx-nikhil1352.vercel.app`) are protected by Vercel login; share only the main address.
+
 ## Known issues / notes
 - Free-tier limits (2026-11-10): Groq gpt-oss-120b 1,000 requests/day and about 8,000 tokens/min; Gemini 3.5-flash 20 requests/day; Gemini 3.1-flash-lite often overloaded (503). The chain absorbs these, but bursts of chat can still return "busy, try again". `npm run test:ai` uses quota, so run it sparingly.
 - Project moved from OneDrive to `C:\dev\nyaya-ai` on 2026-11-10 (OneDrive sync made pages take 6–14 s; now 0.07–0.5 s). Back up with Git/GitHub instead of OneDrive.
@@ -214,8 +222,10 @@ Phase order follows the original specification. The financial engine stays at Ph
 
 | Phase 14: **full run** — unit 175/175, database 40/40 (incl. new account-deletion test), typecheck, lint, production build, production header/access checks | ✅ Pass |
 
+| Phase 15 live checks (nyaya-ai-plum.vercel.app): home 200 with security headers, logged-out redirect/401, signup confirmation link returns to the app | ✅ Pass |
+
 ## Next steps
-1. Phase 15: deployment.
+1. Raw outputs folder for the submission (unedited outputs from our own test cases).
 2. Later (optional): Phase 13 document generation.
 2. When India Code is reachable: add Telangana Money Lenders Act, Contract Act, BNS (see `legal-corpus/README.md`).
 2. Later: run `npm run test:ai -- tests/ai/documents.test.ts` once (uses 3 Gemini reads).
