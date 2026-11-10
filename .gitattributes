@@ -1,0 +1,5 @@
+# Never change line endings inside these files
+*.pdf binary
+*.png binary
+*.jpg binary
+*.docx binary

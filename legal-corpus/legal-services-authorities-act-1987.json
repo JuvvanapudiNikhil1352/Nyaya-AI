@@ -1,0 +1,37 @@
+{
+  "slug": "legal-services-authorities-act-1987",
+  "title": "The Legal Services Authorities Act, 1987",
+  "short_title": "Legal Services Authorities Act, 1987",
+  "jurisdiction": "IN",
+  "source_url": "https://patnahighcourt.gov.in/BSLSA/pdf/ActsRules/1.pdf",
+  "issuing_authority": "Parliament of India (copy published by the Bihar State Legal Services Authority, Patna High Court)",
+  "document_type": "act",
+  "act_year": 1987,
+  "document_version": "Central text with amendments as printed in the source (amendment footnotes omitted). Income limits in section 12(h) are those set by the State Government; current Andhra Pradesh / Telangana limits are NOT included here.",
+  "retrieved_on": "2026-11-11",
+  "raw_file": "raw/legal-services-authorities-act-1987.pdf",
+  "applicability": [
+    {
+      "state": "AP",
+      "lender_type": "any",
+      "notes": "Free legal aid through the AP State / District Legal Services Authorities."
+    },
+    {
+      "state": "TG",
+      "lender_type": "any",
+      "notes": "Free legal aid through the Telangana State / District Legal Services Authorities."
+    }
+  ],
+  "sections": [
+    {
+      "ref": "Section 12",
+      "heading": "Criteria for giving legal services",
+      "text": "Every person who has to file or defend a case shall be entitled to legal services under this Act if that person is--\n(a) a member of a Scheduled Caste or Scheduled Tribe;\n(b) a victim of trafficking in human beings or begar as referred to in article 23 of the Constitution;\n(c) a woman or a child; 4[(d) a person with disability as defined in clause (i) of section 2 of the Persons With Disabilities (Equal Opportunities, Protection of Rights and Full Participation) Act, 1995 (1 of 1996);]\n(e) a person under circumstances of underserved want such as being a victim of a mass disaster, ethnic, violence, caste atrocity, flood, drought, earthquake or industrial disaster; or\n(f) an industrial workman; or\n(g) in custody, including custody in a protective home within the meaning of clause (g) of section 2 of the Immoral Traffic (Prevention) Act, 1956 (104 of 1956), or in a juvenile home within the meaning of clause (j) of section 2 of the Juvenile Justice Act, 1986 (53 of 1986), or in a psychiatric hospital or psychiatric nursing home within the meaning of clause (g) of section 2 of the Mental Health Act, 1987 (14 of 1987); or\n1[(h) in receipt of annual income less than rupees nine thousand or such other higher amount as may be prescribed by the State Government, if the case is before a court other than the Supreme Court, and less than rupees twelve thousand or such other higher amount as may be prescribed by the Central Government, if the case is before the Supreme Court.]"
+    },
+    {
+      "ref": "Section 13",
+      "heading": "Entitlement of legal services",
+      "text": "(1) Persons who satisfy all or any of the criteria specified in section 12 shall be entitled to receive legal services provided that the concerned Authority is satisfied that such person has a prima facie case to prosecute or to defend.\n(2) An affidavit made by a person as to his income may be regarded as sufficient for making him eligible to the entitlement of legal services under this Act unless the concerned Authority has reason to disbelieve such affidavit."
+    }
+  ]
+}
