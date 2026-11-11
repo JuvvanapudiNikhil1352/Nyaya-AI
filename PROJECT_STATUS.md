@@ -224,8 +224,12 @@ Phase order follows the original specification. The financial engine stays at Ph
 
 | Phase 15 live checks (nyaya-ai-plum.vercel.app): home 200 with security headers, logged-out redirect/401, signup confirmation link returns to the app | ✅ Pass |
 
+| Raw outputs (`npm run raw:outputs`, 3 submission cases): run 1 exposed 5 defects (wrong-year relative dates, charges without amount not recorded, pressure calls not flagged, invented "amount received", "excessive or unfair"); all fixed with unit tests; run 2 clean. See `raw-outputs/README.md`. **Total unit tests: 179** | ✅ |
+
 ## Next steps
-1. Raw outputs folder for the submission (unedited outputs from our own test cases).
+1. Optional: add more submission cases to `tests/raw/cases.ts` and re-run `npm run raw:outputs`.
+2. When India Code is reachable: add AP/TG money-lending laws, Contract Act, BNS to the legal corpus.
+3. Optional: Phase 13 document generation.
 2. Later (optional): Phase 13 document generation.
 2. When India Code is reachable: add Telangana Money Lenders Act, Contract Act, BNS (see `legal-corpus/README.md`).
 2. Later: run `npm run test:ai -- tests/ai/documents.test.ts` once (uses 3 Gemini reads).
