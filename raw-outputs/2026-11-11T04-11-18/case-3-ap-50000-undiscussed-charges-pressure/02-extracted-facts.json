@@ -1,0 +1,137 @@
+{
+  "ok": true,
+  "ms": 68,
+  "output": {
+    "facts": {
+      "borrowing_date": {
+        "field": "borrowing_date",
+        "value": "2026-07-01",
+        "approximate": true,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "about 4 months ago",
+        "confidence": 0.7,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      },
+      "documents_mentioned": {
+        "field": "documents_mentioned",
+        "value": "UPI payment records, no formal loan agreement",
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I have some UPI payment records but no formal loan agreement",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      },
+      "interest_rate": {
+        "field": "interest_rate",
+        "value": 2,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "2% monthly interest",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      },
+      "lender_demand": {
+        "field": "lender_demand",
+        "value": 60000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "lender is demanding another ₹60,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      },
+      "principal_amount": {
+        "field": "principal_amount",
+        "value": 50000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I borrowed ₹50,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      },
+      "rate_period": {
+        "field": "rate_period",
+        "value": "monthly",
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "2% monthly interest",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      },
+      "total_repaid_reported": {
+        "field": "total_repaid_reported",
+        "value": 20000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I have already repaid ₹20,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:12:03.751722+00:00"
+      }
+    },
+    "repayments": [],
+    "charges": [
+      {
+        "id": "0057e699-8ab8-444e-9145-81431f0ea42a",
+        "charge_date": null,
+        "amount": null,
+        "charge_type": "other",
+        "description": "additional charges that were never discussed",
+        "has_written_basis": "no",
+        "source_type": "user_statement",
+        "source_quote": "additional charges that were never discussed",
+        "confirmation_status": "unverified"
+      }
+    ],
+    "missing_information": [
+      {
+        "key": "interest_type",
+        "label": "Simple or compound",
+        "required": true
+      },
+      {
+        "key": "interest_method",
+        "label": "Flat or reducing balance",
+        "required": false
+      },
+      {
+        "key": "tenure_months",
+        "label": "Loan period (months)",
+        "required": false
+      },
+      {
+        "key": "repayment_frequency",
+        "label": "Repayment schedule",
+        "required": false
+      },
+      {
+        "key": "lender_demand_date",
+        "label": "Date of the demand",
+        "required": false
+      },
+      {
+        "key": "repayment_allocation",
+        "label": "How payments were applied",
+        "required": false
+      },
+      {
+        "key": "repayments",
+        "label": "Individual repayment dates and amounts",
+        "required": false
+      }
+    ],
+    "has_disputes": false
+  }
+}

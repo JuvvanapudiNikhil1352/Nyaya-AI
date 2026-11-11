@@ -42,3 +42,11 @@ describe("screenMessage — ordinary loan messages", () => {
     expect(screenMessage(text)).toEqual({ concern: false, selfHarm: false });
   });
 });
+
+describe("persistent pressure (raw-output finding, case 3)", () => {
+  it("flags repeated calls and pressure to pay", () => {
+    expect(screenMessage("He is repeatedly calling me and pressuring me to pay immediately.").concern).toBe(true);
+    expect(screenMessage("The lender keeps calling my family.").concern).toBe(true);
+    expect(screenMessage("I paid ₹10,000 by UPI and he called once to confirm.").concern).toBe(false);
+  });
+});

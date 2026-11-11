@@ -1,0 +1,139 @@
+{
+  "ok": true,
+  "ms": 67,
+  "output": {
+    "facts": {
+      "principal_amount": {
+        "field": "principal_amount",
+        "value": 100000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I borrowed ₹1,00,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:44.759881+00:00"
+      },
+      "amount_actually_received": {
+        "field": "amount_actually_received",
+        "value": 100000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I borrowed ₹1,00,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:44.759881+00:00"
+      },
+      "borrowing_date": {
+        "field": "borrowing_date",
+        "value": "2026-05-01",
+        "approximate": true,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "about 6 months ago",
+        "confidence": 0.7,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:44.759881+00:00"
+      },
+      "interest_rate": {
+        "field": "interest_rate",
+        "value": 2,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "2% monthly interest",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:44.759881+00:00"
+      },
+      "rate_period": {
+        "field": "rate_period",
+        "value": "monthly",
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "2% monthly interest",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:44.759881+00:00"
+      },
+      "documents_mentioned": {
+        "field": "documents_mentioned",
+        "value": "UPI transaction records, no formal loan agreement",
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I have UPI transaction records for both payments, but no formal loan agreement",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:44.759881+00:00"
+      }
+    },
+    "repayments": [
+      {
+        "id": "f8ffbcb2-cd8a-4627-a2be-dca969e76cf4",
+        "repayment_date": "2026-07-01",
+        "date_is_approximate": true,
+        "amount": 20000,
+        "payment_method": "upi",
+        "description": null,
+        "source_type": "user_statement",
+        "source_quote": "",
+        "evidence_document_id": null,
+        "confirmation_status": "unverified"
+      },
+      {
+        "id": "45436762-9b6d-49e0-93bd-fc4434e303aa",
+        "repayment_date": "2026-09-01",
+        "date_is_approximate": true,
+        "amount": 15000,
+        "payment_method": "upi",
+        "description": null,
+        "source_type": "user_statement",
+        "source_quote": "",
+        "evidence_document_id": null,
+        "confirmation_status": "unverified"
+      }
+    ],
+    "charges": [],
+    "missing_information": [
+      {
+        "key": "interest_type",
+        "label": "Simple or compound",
+        "required": true
+      },
+      {
+        "key": "interest_method",
+        "label": "Flat or reducing balance",
+        "required": false
+      },
+      {
+        "key": "tenure_months",
+        "label": "Loan period (months)",
+        "required": false
+      },
+      {
+        "key": "repayment_frequency",
+        "label": "Repayment schedule",
+        "required": false
+      },
+      {
+        "key": "lender_demand",
+        "label": "Lender's current demand",
+        "required": true
+      },
+      {
+        "key": "lender_demand_date",
+        "label": "Date of the demand",
+        "required": false
+      },
+      {
+        "key": "repayment_allocation",
+        "label": "How payments were applied",
+        "required": false
+      }
+    ],
+    "has_disputes": false
+  }
+}

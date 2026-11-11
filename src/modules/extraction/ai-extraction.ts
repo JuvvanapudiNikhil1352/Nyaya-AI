@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
   CHARGE_TYPES,
   FACT_FIELD_KEYS,
+  FIELD_BY_KEY,
   PAYMENT_METHODS,
   validateFactValue,
   WRITTEN_BASIS,
@@ -140,6 +141,29 @@ const normForMatch = (s: string) =>
     .replace(/[^\p{L}\p{N}₹%'.,]+/gu, " ")
     .trim();
 
+const NUMBER_WORDS: Record<string, number> = {
+  a: 1, an: 1, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, eighteen: 18, "a couple of": 2, "a few": 3,
+};
+
+/**
+ * Date for phrases like "about 10 months ago", "2 years ago", "3 weeks ago",
+ * computed from today in code (models often guess the wrong year).
+ * Months/years → 1st of that month. Returns null if the text has no such phrase.
+ */
+export function relativeDateFromText(text: string, now = new Date()): string | null {
+  const m = text.toLowerCase().match(/\b(\d{1,2}|a couple of|a few|an?|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|eighteen)\s+(weeks?|months?|years?)\s+(ago|back)\b/);
+  if (!m) return null;
+  const n = /^\d+$/.test(m[1]) ? Number(m[1]) : NUMBER_WORDS[m[1]];
+  if (!n) return null;
+  const today = new Date(`${now.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" })}T00:00:00Z`);
+  if (m[2].startsWith("week")) return new Date(today.getTime() - n * 7 * 86_400_000).toISOString().slice(0, 10);
+  const months = m[2].startsWith("year") ? n * 12 : n;
+  const d = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth() - months, 1));
+  return d.toISOString().slice(0, 10);
+}
+
+const daysApart = (a: string, b: string) => Math.abs(Date.parse(`${a}T00:00:00Z`) - Date.parse(`${b}T00:00:00Z`)) / 86_400_000;
+
 /** True if the (normalised) quote occurs in the (normalised) message. */
 export function quoteAppearsIn(quote: string, message: string): boolean {
   const q = normForMatch(quote).replace(/^[.,]+|[.,]+$/g, "").trim();
@@ -190,7 +214,16 @@ export function normaliseExtraction(
       }
       continue;
     }
-    const candidate = f.date ?? f.number ?? f.text;
+    // "I borrowed ₹X" is the principal, not proof of what was actually received.
+    if (field === "amount_actually_received" && !/receiv|got|gave me|given|credited|handed|in hand|deduct|cut|only paid me/i.test(quote || f.quote)) continue;
+    let candidate = f.date ?? f.number ?? f.text;
+    let approximate = f.approximate;
+    // Relative dates ("10 months ago") are computed in code from the borrower's own words.
+    const relative = FIELD_BY_KEY[field].kind === "date" && quote ? relativeDateFromText(quote, now) : null;
+    if (relative && (typeof candidate !== "string" || daysApart(candidate, relative) > 31)) {
+      candidate = relative;
+      approximate = true;
+    }
     if (candidate === null || candidate === "unknown") continue;
     const checked = validateFactValue(field, candidate, now);
     if ("error" in checked) continue;
@@ -198,7 +231,7 @@ export function normaliseExtraction(
       field,
       kind: "value",
       value: checked.value,
-      approximate: f.approximate,
+      approximate,
       confidence: CONFIDENCE[f.certainty],
       quote,
     });

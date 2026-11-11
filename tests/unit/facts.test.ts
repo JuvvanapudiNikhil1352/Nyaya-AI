@@ -235,3 +235,27 @@ describe("quoteAppearsIn", () => {
     expect(quoteAppearsIn("", "anything")).toBe(false);
   });
 });
+
+describe("relative dates and received amounts (raw-output findings)", () => {
+  const now = new Date("2026-11-11T12:00:00+05:30");
+  it("computes 'N months ago' in code, from today", async () => {
+    const { relativeDateFromText } = await import("@/modules/extraction/ai-extraction");
+    expect(relativeDateFromText("around 10 months ago", now)).toBe("2026-01-01");
+    expect(relativeDateFromText("about 4 months ago", now)).toBe("2026-07-01");
+    expect(relativeDateFromText("two years ago", now)).toBe("2024-11-01");
+    expect(relativeDateFromText("3 weeks ago", now)).toBe("2026-10-21");
+    expect(relativeDateFromText("in March", now)).toBeNull();
+  });
+  it("overrides a wrong year from the AI, and drops an invented 'amount actually received'", () => {
+    const raw = {
+      facts: [
+        { field: "borrowing_date", number: null, text: null, date: "2024-01-01", approximate: true, unknown: false, certainty: "interpreted" as const, quote: "around 10 months ago" },
+        { field: "amount_actually_received", number: 100000, text: null, date: null, approximate: false, unknown: false, certainty: "explicit" as const, quote: "I borrowed ₹1,00,000" },
+      ],
+      repayments: [],
+      charges: [],
+    };
+    const out = normaliseExtraction(raw, "I borrowed ₹1,00,000 around 10 months ago", now);
+    expect(out.facts).toEqual([{ field: "borrowing_date", kind: "value", value: "2026-01-01", approximate: true, confidence: 0.7, quote: "around 10 months ago" }]);
+  });
+});

@@ -124,6 +124,8 @@ export type CheckedAssessment = {
   lawyerReason: string;
   /** Points removed by the checks, kept for transparency and testing. */
   removed: { title: string; reason: string }[];
+  /** Known misstatements corrected in code (see KNOWN_FIXES). */
+  corrections: string[];
 };
 
 const ILLEGAL_CLAIM = /\b(is|are|was|were|has been|have been|being)\s+(clearly\s+|definitely\s+|plainly\s+)?(illegal|unlawful|a crime|criminal)\b|\b(committed|is committing|guilty of)\s+(an?\s+)?(offence|crime)\b/i;
@@ -165,8 +167,44 @@ export function textProblems(text: string, cited: Passage[]): string | null {
 const KINDS = ["relevant_law", "possible_concern", "possible_remedy"] as const;
 const FALLBACK_SUMMARY = "The verified legal sources below may be relevant to your situation. Read each point with its source, and consider free legal aid before taking action.";
 
+/**
+ * Known misstatements of a verified provision, corrected in code. Usurious
+ * Loans Act s.3(1) requires BOTH "(a) that the interest is excessive; and
+ * (b) that the transaction was ... substantially unfair" — the AI has turned
+ * this "and" into "or" in testing.
+ */
+const KNOWN_FIXES: { pattern: RegExp; replace: string; note: string }[] = [
+  {
+    pattern: /\bexcessive\s+or\s+(?=(?:if\s+|that\s+)?(?:the\s+|your\s+)?(?:deal|transaction|loan|arrangement)?\s*(?:was\s+|is\s+|to\s+be\s+)?(?:substantially\s+)?unfair)/gi,
+    replace: "excessive and ",
+    note: 'Changed "excessive or … unfair" to "excessive and … unfair" (Usurious Loans Act s.3 requires both).',
+  },
+];
+
+export function applyKnownFixes(text: string): { text: string; notes: string[] } {
+  let out = text;
+  const notes: string[] = [];
+  for (const f of KNOWN_FIXES) {
+    const next = out.replace(f.pattern, f.replace);
+    if (next !== out) notes.push(f.note);
+    out = next;
+  }
+  return { text: out, notes };
+}
+
 /** Keeps only points that cite real passages and stay within them. */
-export function checkAssessment(raw: AILegal, passages: Passage[]): CheckedAssessment {
+export function checkAssessment(input: AILegal, passages: Passage[]): CheckedAssessment {
+  const corrections: string[] = [];
+  const fix = (t: string) => {
+    const r = applyKnownFixes(t);
+    corrections.push(...r.notes);
+    return r.text;
+  };
+  const raw: AILegal = {
+    ...input,
+    summary: fix(input.summary),
+    points: input.points.map((p) => ({ ...p, title: fix(p.title), explanation: fix(p.explanation) })),
+  };
   const byLabel = new Map(passages.map((p) => [p.label, p]));
   const removed: CheckedAssessment["removed"] = [];
   const points: LegalPoint[] = [];
@@ -184,7 +222,7 @@ export function checkAssessment(raw: AILegal, passages: Passage[]): CheckedAsses
   const summary = textProblems(raw.summary, passages) ? FALLBACK_SUMMARY : raw.summary.trim() || FALLBACK_SUMMARY;
   const lawyerReason = textProblems(raw.lawyer_reason, passages) ? "" : raw.lawyer_reason.trim();
   const factsNeeded = raw.facts_needed.map((f) => f.trim()).filter((f) => f && !textProblems(f, passages)).slice(0, 5);
-  return { summary, points, factsNeeded, lawyerNeeded: raw.lawyer_needed, lawyerReason, removed };
+  return { summary, points, factsNeeded, lawyerNeeded: raw.lawyer_needed, lawyerReason, removed, corrections: [...new Set(corrections)] };
 }
 
 /** Professional help is recommended whenever any of these is true — not left to the AI alone. */

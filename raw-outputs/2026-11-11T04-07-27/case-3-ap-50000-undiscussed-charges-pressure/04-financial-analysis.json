@@ -1,0 +1,504 @@
+{
+  "ok": true,
+  "ms": 700,
+  "output": {
+    "plain_language_explanation": [
+      "Some loan terms are not known, so we calculated 3 possible ways. On 11 Nov 2026, the balance would be between ₹58,333.33 and ₹67,631.57, depending on what was agreed.",
+      "The lender's demand of ₹60,000 falls within this range. Which method was agreed decides whether it is right.",
+      "A difference does not by itself mean the lender acted illegally. It means the calculation needs a closer look."
+    ],
+    "result": {
+      "engineVersion": "1.0.0",
+      "status": "scenarios",
+      "asOfDate": "2026-11-11",
+      "principal": 50000,
+      "totalRepaid": 20000,
+      "lenderDemand": 60000,
+      "scenarios": [
+        {
+          "method": "flat",
+          "compoundEveryMonths": null,
+          "totalInterest": 28333.33,
+          "chargesIncluded": 0,
+          "totalRepaid": 20000,
+          "principalOutstanding": 50000,
+          "interestOutstanding": 8333.33,
+          "chargesOutstanding": 0,
+          "balance": 58333.33,
+          "steps": [
+            {
+              "date": "2024-07-01",
+              "kind": "start",
+              "description": "Loan taken",
+              "amount": 50000,
+              "interestAccrued": 0,
+              "principalBalance": 50000,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 50000
+            },
+            {
+              "date": "2026-11-11",
+              "kind": "repayment",
+              "description": "Repayment",
+              "amount": 20000,
+              "interestAccrued": 28333.33,
+              "principalBalance": 50000,
+              "interestBalance": 8333.33,
+              "chargesBalance": 0,
+              "balance": 58333.33
+            },
+            {
+              "date": "2026-11-11",
+              "kind": "end",
+              "description": "Calculation date",
+              "amount": 0,
+              "interestAccrued": 0,
+              "principalBalance": 50000,
+              "interestBalance": 8333.33,
+              "chargesBalance": 0,
+              "balance": 58333.33
+            }
+          ],
+          "key": "flat",
+          "label": "Flat interest",
+          "description": "Interest is charged every period on the full original amount, even after part-payments.",
+          "discrepancy": 1666.67
+        },
+        {
+          "method": "simple_reducing",
+          "compoundEveryMonths": null,
+          "totalInterest": 28333.33,
+          "chargesIncluded": 0,
+          "totalRepaid": 20000,
+          "principalOutstanding": 50000,
+          "interestOutstanding": 8333.33,
+          "chargesOutstanding": 0,
+          "balance": 58333.33,
+          "steps": [
+            {
+              "date": "2024-07-01",
+              "kind": "start",
+              "description": "Loan taken",
+              "amount": 50000,
+              "interestAccrued": 0,
+              "principalBalance": 50000,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 50000
+            },
+            {
+              "date": "2026-11-11",
+              "kind": "repayment",
+              "description": "Repayment",
+              "amount": 20000,
+              "interestAccrued": 28333.33,
+              "principalBalance": 50000,
+              "interestBalance": 8333.33,
+              "chargesBalance": 0,
+              "balance": 58333.33
+            },
+            {
+              "date": "2026-11-11",
+              "kind": "end",
+              "description": "Calculation date",
+              "amount": 0,
+              "interestAccrued": 0,
+              "principalBalance": 50000,
+              "interestBalance": 8333.33,
+              "chargesBalance": 0,
+              "balance": 58333.33
+            }
+          ],
+          "key": "simple_reducing",
+          "label": "Simple interest on the reducing balance",
+          "description": "Interest is charged only on the amount still owed. Unpaid interest does not itself earn interest.",
+          "discrepancy": 1666.67
+        },
+        {
+          "method": "compound",
+          "compoundEveryMonths": 1,
+          "totalInterest": 37631.57,
+          "chargesIncluded": 0,
+          "totalRepaid": 20000,
+          "principalOutstanding": 67631.57,
+          "interestOutstanding": 0,
+          "chargesOutstanding": 0,
+          "balance": 67631.57,
+          "steps": [
+            {
+              "date": "2024-07-01",
+              "kind": "start",
+              "description": "Loan taken",
+              "amount": 50000,
+              "interestAccrued": 0,
+              "principalBalance": 50000,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 50000
+            },
+            {
+              "date": "2024-08-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1000,
+              "principalBalance": 51000,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 51000
+            },
+            {
+              "date": "2024-09-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1020,
+              "principalBalance": 52020,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 52020
+            },
+            {
+              "date": "2024-10-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1040.4,
+              "principalBalance": 53060.4,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 53060.4
+            },
+            {
+              "date": "2024-11-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1061.21,
+              "principalBalance": 54121.61,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 54121.61
+            },
+            {
+              "date": "2024-12-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1082.43,
+              "principalBalance": 55204.04,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 55204.04
+            },
+            {
+              "date": "2025-01-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1104.08,
+              "principalBalance": 56308.12,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 56308.12
+            },
+            {
+              "date": "2025-02-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1126.16,
+              "principalBalance": 57434.28,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 57434.28
+            },
+            {
+              "date": "2025-03-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1148.69,
+              "principalBalance": 58582.97,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 58582.97
+            },
+            {
+              "date": "2025-04-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1171.66,
+              "principalBalance": 59754.63,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 59754.63
+            },
+            {
+              "date": "2025-05-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1195.09,
+              "principalBalance": 60949.72,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 60949.72
+            },
+            {
+              "date": "2025-06-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1218.99,
+              "principalBalance": 62168.71,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 62168.71
+            },
+            {
+              "date": "2025-07-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1243.37,
+              "principalBalance": 63412.08,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 63412.08
+            },
+            {
+              "date": "2025-08-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1268.24,
+              "principalBalance": 64680.32,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 64680.32
+            },
+            {
+              "date": "2025-09-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1293.61,
+              "principalBalance": 65973.93,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 65973.93
+            },
+            {
+              "date": "2025-10-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1319.48,
+              "principalBalance": 67293.41,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 67293.41
+            },
+            {
+              "date": "2025-11-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1345.87,
+              "principalBalance": 68639.28,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 68639.28
+            },
+            {
+              "date": "2025-12-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1372.79,
+              "principalBalance": 70012.07,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 70012.07
+            },
+            {
+              "date": "2026-01-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1400.24,
+              "principalBalance": 71412.31,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 71412.31
+            },
+            {
+              "date": "2026-02-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1428.25,
+              "principalBalance": 72840.56,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 72840.56
+            },
+            {
+              "date": "2026-03-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1456.81,
+              "principalBalance": 74297.37,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 74297.37
+            },
+            {
+              "date": "2026-04-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1485.95,
+              "principalBalance": 75783.32,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 75783.32
+            },
+            {
+              "date": "2026-05-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1515.67,
+              "principalBalance": 77298.99,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 77298.99
+            },
+            {
+              "date": "2026-06-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1545.98,
+              "principalBalance": 78844.97,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 78844.97
+            },
+            {
+              "date": "2026-07-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1576.9,
+              "principalBalance": 80421.87,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 80421.87
+            },
+            {
+              "date": "2026-08-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1608.44,
+              "principalBalance": 82030.31,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 82030.31
+            },
+            {
+              "date": "2026-09-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1640.61,
+              "principalBalance": 83670.92,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 83670.92
+            },
+            {
+              "date": "2026-10-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1673.42,
+              "principalBalance": 85344.34,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 85344.34
+            },
+            {
+              "date": "2026-11-01",
+              "kind": "capitalise",
+              "description": "Unpaid interest added to the loan",
+              "amount": 0,
+              "interestAccrued": 1706.89,
+              "principalBalance": 87051.23,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 87051.23
+            },
+            {
+              "date": "2026-11-11",
+              "kind": "repayment",
+              "description": "Repayment",
+              "amount": 20000,
+              "interestAccrued": 580.34,
+              "principalBalance": 67631.57,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 67631.57
+            },
+            {
+              "date": "2026-11-11",
+              "kind": "end",
+              "description": "Calculation date",
+              "amount": 0,
+              "interestAccrued": 0,
+              "principalBalance": 67631.57,
+              "interestBalance": 0,
+              "chargesBalance": 0,
+              "balance": 67631.57
+            }
+          ],
+          "key": "compound",
+          "label": "Compound interest (added every month)",
+          "description": "Unpaid interest is added to the loan at regular intervals, and then also earns interest.",
+          "discrepancy": -7631.57
+        }
+      ],
+      "primaryKey": null,
+      "range": {
+        "min": 58333.33,
+        "max": 67631.57
+      },
+      "chargesNeedingReview": [],
+      "rateSummary": {
+        "rate": 2,
+        "ratePeriod": "monthly",
+        "perMonth": 2,
+        "perYearSimple": 24,
+        "perYearCompounded": 26.82
+      },
+      "flatTermSummary": null,
+      "assumptions": [
+        "Calculated up to today (2026-11-11), because the date of the lender's demand is not known.",
+        "Time is counted in calendar months; a part-month counts in proportion to its days.",
+        "Individual payments are not listed, so the total you reported (₹20,000) is used.",
+        "Payments without a date (₹20,000) are treated as paid on the calculation date. If they were paid earlier, the balance under the reducing-balance and compound methods would be lower.",
+        "Each payment is applied to unpaid interest first, then to the principal (the usual practice). This affects the reducing-balance and compound methods.",
+        "Some loan terms are not known, so each possible method is calculated. The real balance depends on what was agreed.",
+        "For compound interest, unpaid interest is assumed to be added every month, matching the rate period."
+      ],
+      "missing": [],
+      "warnings": []
+    }
+  }
+}

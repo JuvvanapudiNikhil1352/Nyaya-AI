@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-11-11T04:11:19.904Z",
+  "git_commit": "af91fe6902b6765f5e75597b5a01721afeb6f64a",
+  "calculation_engine_version": "1.0.0",
+  "chat_model_chain": [
+    "groq:openai/gpt-oss-120b",
+    "gemini:gemini-3.5-flash",
+    "gemini:gemini-3.1-flash-lite",
+    "gemini:gemini-3.5-flash-lite"
+  ],
+  "document_model_chain": [
+    "gemini:gemini-3.5-flash",
+    "gemini:gemini-3.1-flash-lite",
+    "gemini:gemini-3.5-flash-lite"
+  ],
+  "verified_legal_sources": [
+    {
+      "title": "The Usurious Loans Act, 1918",
+      "document_version": "Central text as modified up to 3 December 2018. Does NOT include the Andhra Pradesh amendment (A.P. Act 24 of 1961) noted in the Act's footnotes.",
+      "verified_by": "Nikhil",
+      "verified_at": "2026-11-10T19:48:27.333+00:00"
+    },
+    {
+      "title": "The Legal Services Authorities Act, 1987",
+      "document_version": "Central text with amendments as printed in the source (amendment footnotes omitted). Income limits in section 12(h) are those set by the State Government; current Andhra Pradesh / Telangana limits are NOT included here.",
+      "verified_by": "Nikhil",
+      "verified_at": "2026-11-10T19:50:51.311+00:00"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-1-ap-80000-3pct-unknown-method",
+      "title": "AP: ₹80,000 at 3% per month, ₹70,000 repaid (UPI + cash), lender demands ₹95,000, no agreement",
+      "state": "AP"
+    },
+    {
+      "id": "case-2-tg-100000-2pct-repayments-ignored",
+      "title": "TG: ₹1,00,000 at 2% per month, ₹20,000 (month 2) + ₹15,000 (month 4) by UPI not credited by the lender",
+      "state": "TG"
+    },
+    {
+      "id": "case-3-ap-50000-undiscussed-charges-pressure",
+      "title": "AP: ₹50,000 at 2% per month, ₹20,000 repaid, lender demands ₹60,000 incl. undiscussed charges, repeated pressure calls",
+      "state": "AP"
+    }
+  ],
+  "method": "Each borrower message was sent once to the chat as the first message of a new case. The case summary was then confirmed exactly as extracted (no user corrections), followed by the financial analysis, legal assessment, suggested resolution path and the action plan for that path. Files are written by the program and not edited."
+}

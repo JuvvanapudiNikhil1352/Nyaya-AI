@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "ms": 499,
+  "output": {
+    "confirmed": true,
+    "missing_information_at_confirmation": [
+      {
+        "key": "interest_type",
+        "label": "Simple or compound",
+        "required": true
+      },
+      {
+        "key": "interest_method",
+        "label": "Flat or reducing balance",
+        "required": false
+      },
+      {
+        "key": "tenure_months",
+        "label": "Loan period (months)",
+        "required": false
+      },
+      {
+        "key": "repayment_frequency",
+        "label": "Repayment schedule",
+        "required": false
+      },
+      {
+        "key": "lender_demand",
+        "label": "Lender's current demand",
+        "required": true
+      },
+      {
+        "key": "lender_demand_date",
+        "label": "Date of the demand",
+        "required": false
+      },
+      {
+        "key": "repayment_allocation",
+        "label": "How payments were applied",
+        "required": false
+      }
+    ],
+    "loan_details": {
+      "id": "439da085-c014-4f8c-a640-39993bb13447",
+      "case_id": "1e2f95f0-8c06-41db-843a-a73dfd9862a4",
+      "principal_amount": 100000,
+      "amount_actually_received": null,
+      "borrowing_date": "2026-05-01",
+      "rate_period": "monthly",
+      "interest_rate": 2,
+      "interest_type": "unknown",
+      "interest_method": "unknown",
+      "compounding_frequency": "unknown",
+      "day_count_convention": "unknown",
+      "tenure_months": null,
+      "repayment_frequency": "unknown",
+      "lender_demand": null,
+      "lender_demand_date": null,
+      "repayment_allocation": "unknown",
+      "currency": "INR",
+      "confirmation_status": "confirmed",
+      "created_at": "2026-11-11T04:11:47.116447+00:00",
+      "updated_at": "2026-11-11T04:11:47.116447+00:00"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "ms": 2338,
+  "output": {
+    "user_message_as_stored": "I borrowed ₹50,000 from a private individual lender in Andhra Pradesh about 4 months ago.\n\nWe agreed on 2% monthly interest, but we never discussed any additional penalties. I have already repaid ₹20,000.Now the lender is demanding another ₹60,000, including additional charges that were never discussed. He is repeatedly calling me and pressuring me to pay immediately.I have some UPI payment records but no formal loan agreement.\n\nCan you help me understand whether these additional charges are justified, what legal concerns I should be aware of, and what options I have to resolve this?My state is Andhra Pradesh.",
+    "assistant_reply": "Could you tell me the exact date when you received the loan amount? Also, do you have any written note or message that mentions the ₹60,000 demand date or amount?",
+    "assistant_metadata": {
+      "model": "openai/gpt-oss-120b",
+      "provider": "groq",
+      "latency_ms": 1669,
+      "used_fallback": false,
+      "safety_concern": false,
+      "self_harm_risk": false
+    },
+    "facts_changed": 7
+  }
+}

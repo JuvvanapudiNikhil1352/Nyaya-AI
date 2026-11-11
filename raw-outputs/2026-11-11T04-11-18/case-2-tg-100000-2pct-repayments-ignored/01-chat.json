@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "ms": 5941,
+  "output": {
+    "user_message_as_stored": "I borrowed ₹1,00,000 from a private lender in Telangana about 6 months ago at 2% monthly interest.\n\nI have repaid ₹20,000 in the second month and ₹15,000 in the fourth month through UPI. However, the lender's latest calculation does not account for these repayments and still shows a high outstanding amount.I have UPI transaction records for both payments, but no formal loan agreement.\n\nCan you help me calculate the outstanding amount, identify the discrepancy, understand my legal position and explain my options?My state is Telangana.",
+    "assistant_reply": "I understand this is stressful. Our financial analysis step will help calculate the exact outstanding amount based on your payments, and our legal assessment step will clarify your position. To help us prepare, what total amount is the lender demanding from you right now, and was there an agreed-upon loan period?",
+    "assistant_metadata": {
+      "model": "gemini-3.1-flash-lite",
+      "provider": "gemini",
+      "latency_ms": 5042,
+      "used_fallback": true,
+      "safety_concern": false,
+      "self_harm_risk": false
+    },
+    "facts_changed": 7
+  }
+}

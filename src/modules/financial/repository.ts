@@ -1,6 +1,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { enforceRateLimit } from "@/lib/security/rate-limit";
+import { todayInIndia } from "@/lib/today";
 import type { CaseRecord } from "@/types/case";
 import { CHARGE_TYPES, labelOf } from "@/modules/extraction/fields";
 import { loadCaseFacts } from "@/modules/facts/repository";
@@ -13,10 +14,7 @@ export class AnalysisError extends Error {}
 const CONFIRMED_STATUSES = ["confirmed", "analysed", "resolution_selected"];
 const CONFIRMED_ITEM = ["confirmed", "corrected"];
 
-/** Today's date in India (the calculation date when no demand date is known). */
-export function todayInIndia(now = new Date()): string {
-  return now.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
-}
+export { todayInIndia };
 
 /** Builds the engine input from the CONFIRMED loan record, repayments and charges only. */
 export async function buildEngineInput(supabase: SupabaseClient, caseId: string, today = todayInIndia()): Promise<EngineInput> {

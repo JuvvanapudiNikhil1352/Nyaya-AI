@@ -1,0 +1,125 @@
+{
+  "ok": true,
+  "ms": 59,
+  "output": {
+    "facts": {
+      "principal_amount": {
+        "field": "principal_amount",
+        "value": 80000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I borrowed ₹80,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      },
+      "borrowing_date": {
+        "field": "borrowing_date",
+        "value": "2024-01-01",
+        "approximate": true,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "around 10 months ago",
+        "confidence": 0.7,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      },
+      "interest_rate": {
+        "field": "interest_rate",
+        "value": 3,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "interest rate would be 3% per month",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      },
+      "rate_period": {
+        "field": "rate_period",
+        "value": "monthly",
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "3% per month",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      },
+      "total_repaid_reported": {
+        "field": "total_repaid_reported",
+        "value": 70000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I have repaid a total of ₹70,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      },
+      "lender_demand": {
+        "field": "lender_demand",
+        "value": 95000,
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I still owe ₹95,000",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      },
+      "documents_mentioned": {
+        "field": "documents_mentioned",
+        "value": "UPI payment records",
+        "approximate": false,
+        "status": "unverified",
+        "sourceType": "user_statement",
+        "quote": "I have some UPI payment records",
+        "confidence": 0.9,
+        "previousConfirmed": null,
+        "createdAt": "2026-11-11T04:07:33.302183+00:00"
+      }
+    },
+    "repayments": [],
+    "charges": [],
+    "missing_information": [
+      {
+        "key": "interest_type",
+        "label": "Simple or compound",
+        "required": true
+      },
+      {
+        "key": "interest_method",
+        "label": "Flat or reducing balance",
+        "required": false
+      },
+      {
+        "key": "tenure_months",
+        "label": "Loan period (months)",
+        "required": false
+      },
+      {
+        "key": "repayment_frequency",
+        "label": "Repayment schedule",
+        "required": false
+      },
+      {
+        "key": "lender_demand_date",
+        "label": "Date of the demand",
+        "required": false
+      },
+      {
+        "key": "repayment_allocation",
+        "label": "How payments were applied",
+        "required": false
+      },
+      {
+        "key": "repayments",
+        "label": "Individual repayment dates and amounts",
+        "required": false
+      }
+    ],
+    "has_disputes": false
+  }
+}

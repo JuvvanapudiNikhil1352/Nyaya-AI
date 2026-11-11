@@ -92,7 +92,7 @@ export async function runLegalAssessment(supabase: SupabaseClient, c: CaseRecord
   if (passages.length === 0) {
     checked = {
       summary: "None of our verified legal sources matched this case closely enough to explain it reliably. Please speak to free legal aid or a lawyer.",
-      points: [], factsNeeded: [], lawyerNeeded: true, lawyerReason: "", removed: [],
+      points: [], factsNeeded: [], lawyerNeeded: true, lawyerReason: "", removed: [], corrections: [],
     };
   } else {
     const message = [

@@ -18,6 +18,9 @@ const THREAT_PATTERNS: RegExp[] = [
   /\b(blackmail(ed|ing)?|extort(ed|ion)?)\b/i,
   /\b(came|come|coming|sent .{0,20}) to (my|our) (house|home|shop|office|workplace)\b/i,
   /\b(follow(ed|ing) me|stalk(ed|ing)?)\b/i,
+  // Persistent pressure: repeated calls or messages, pressuring to pay.
+  /\b(repeatedly|constantly|continuously|keeps?|kept|again and again)\s+(calling|phoning|messaging|texting|coming)\b/i,
+  /\bpressur(e|es|ed|ing)\s+(me|us|my family)\b/i,
   /\b(seiz(e|ed)|took|take|grab(bed)?) (my|our) (house|land|property|gold|vehicle|bike|documents?)\b/i,
   /\b(unsafe|in danger|scared for my (life|family|safety))\b/i,
   /\b(morph(ed)?|obscene|nude|private) (photos?|pictures?|images?|videos?)\b/i,

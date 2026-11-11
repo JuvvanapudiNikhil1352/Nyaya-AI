@@ -180,6 +180,9 @@ function Assessment({ r, createdAt }: { r: LegalAssessmentResult; createdAt: str
         </Card>
       )}
 
+      {(r.corrections ?? []).map((note) => (
+        <p key={note} className="text-xs text-muted-foreground">Automatic correction: {note}</p>
+      ))}
       {r.removed.length > 0 && (
         <p className="text-xs text-muted-foreground">
           {r.removed.length} AI-suggested point{r.removed.length === 1 ? " was" : "s were"} left out because {r.removed.length === 1 ? "it" : "they"} could not be matched to a verified source.

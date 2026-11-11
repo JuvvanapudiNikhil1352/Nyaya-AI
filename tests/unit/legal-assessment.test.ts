@@ -81,3 +81,13 @@ describe("queries, coverage and escalation", () => {
     expect(lawyerTriggers({ ...base, notCoveredCount: 0 }, true)).toHaveLength(1);
   });
 });
+
+describe("known misstatement fixes", () => {
+  it("turns 'excessive or unfair' into 'excessive and unfair' and records the change", () => {
+    const r = checkAssessment(raw([point({ explanation: "If the court finds the interest excessive or the transaction substantially unfair, it may re-open it." })], { summary: "A court may act if the interest is excessive or the deal unfair." }), P);
+    expect(r.points[0].explanation).toMatch(/excessive and the transaction substantially unfair/);
+    expect(r.summary).toMatch(/excessive and the deal unfair/);
+    expect(r.corrections).toHaveLength(1);
+    expect(checkAssessment(raw([point({})]), P).corrections).toEqual([]);
+  });
+});

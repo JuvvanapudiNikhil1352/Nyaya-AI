@@ -1,0 +1,135 @@
+{
+  "ok": true,
+  "ms": 12929,
+  "output": {
+    "summary": "If a lawsuit is filed against you for the recovery of this loan, a court may have the power to review the transaction. Under the law, a court can re-open a loan if it finds the interest is excessive and the transaction was substantially unfair. You may also be entitled to free legal services if you meet specific eligibility criteria.",
+    "points": [
+      {
+        "kind": "relevant_law",
+        "title": "Court Review of Loans",
+        "explanation": "A court may re-open a loan transaction if it determines that the interest charged is excessive and the transaction was substantially unfair. The court may then take an account between the parties and relieve you of liability for excessive interest.",
+        "citations": [
+          "P1",
+          "P4"
+        ]
+      },
+      {
+        "kind": "possible_concern",
+        "title": "Defining Excessive Interest",
+        "explanation": "Whether interest is excessive depends on what a court deems reasonable, considering the risk the lender faced at the time of the loan. A court will also consider any extra charges, fines, or bonuses, and whether compound interest was applied.",
+        "citations": [
+          "P1"
+        ]
+      },
+      {
+        "kind": "possible_remedy",
+        "title": "Court Powers in a Suit",
+        "explanation": "If a suit is brought against you for the recovery of the loan, a court may revise or set aside any agreement or security made in respect of the loan. It may also order the creditor to repay sums if it finds you have paid more than what is fair.",
+        "citations": [
+          "P1",
+          "P4"
+        ]
+      },
+      {
+        "kind": "possible_remedy",
+        "title": "Access to Legal Aid",
+        "explanation": "You may be entitled to free legal services if you meet certain criteria, such as being a woman, a member of a Scheduled Caste or Tribe, or having an income below a specific limit. An authority will need to be satisfied that you have a valid case to defend.",
+        "citations": [
+          "P2",
+          "P3"
+        ]
+      }
+    ],
+    "factsNeeded": [
+      "Whether the lender is a licensed money lender",
+      "Whether the lender applied compound interest to your loan",
+      "Your specific financial circumstances or necessities at the time you took the loan",
+      "Whether you meet the income or social criteria for free legal aid"
+    ],
+    "lawyerNeeded": true,
+    "lawyerReason": "A lawyer is needed to assess whether your specific loan agreement qualifies for relief under the Usurious Loans Act and to guide you through the formal legal procedures required to challenge the lender's demand.",
+    "removed": [],
+    "corrections": [],
+    "version": "1.0.0",
+    "state": "AP",
+    "safetyConcern": false,
+    "lawyer": {
+      "recommended": true,
+      "reasons": [
+        "The lender's demand is higher than our calculation.",
+        "Some laws that may apply are not yet in our verified sources."
+      ]
+    },
+    "notCovered": [
+      "Andhra Pradesh money-lending law currently in force",
+      "Contract law on penalties and undue influence (Indian Contract Act, 1872)"
+    ],
+    "passages": [
+      {
+        "label": "P1",
+        "chunkId": "53aeac3f-0f9e-458c-ba86-a1af11a89e27",
+        "sourceTitle": "The Usurious Loans Act, 1918",
+        "sourceUrl": "https://thc.nic.in/Central%20Governmental%20Acts%5CUsurious%20Loans%20Act,%201918..pdf",
+        "documentVersion": "Central text as modified up to 3 December 2018. Does NOT include the Andhra Pradesh amendment (A.P. Act 24 of 1961) noted in the Act's footnotes.",
+        "sectionReference": "Section 3 (part 1 of 2)",
+        "content": "Usurious Loans Act, 1918 — Section 3: Re-opening of transactions\n\n(1) Notwithstanding anything in the Usury Laws Repeal Act, 1855 (28 of 1855), where, in any suit to which this Act applies, whether heard ex parte or otherwise, the Court has reason to believe, --\n(a) that the interest is excessive; and\n(b) that the transaction was, as between the parties thereto, substantially unfair, the Court may exercise all or any of the following powers, namely, may,--\n(i) re-open the transaction, take an account between the parties, and relieve the debtor of all liability in respect of any excessive interest;\n(ii) notwithstanding any agreement, purporting to close previous dealings and to create a new obligation, re-open any account already taken between them and relieve the debtor of all liability in respect of any excessive interest, and if anything has been paid or allowed in account in respect of such liability, order the creditor to repay any sum which it considers to be repayable in respect thereof;\n(iii) set aside either wholly or in part or revise or alter any security given or agreement made in respect of any loan, and if the creditor has parted with the security, order him to indemnify the debtor in such manner and to such extent as it may deem just:\nProvided that, in the exercise of these powers, the Court shall not--\n(i) re-open any agreement purporting to close previous dealings and to create a new obligation which has been entered into by the parties or any persons from whom they claim at a date more than 1[twelve] years from the date of the transaction;\n(ii) do anything which affects any decree of a Court.\nExplanation.--In the case of a suit brought on a series of transactions the expression \"the transaction\" means, for the purposes of proviso (i), the first of such transactions.\n(2) (a) In this section \"excessive\" means in excess of that which the Court deems to be reasonable having regard to the risk incurred as it appeared, or must be taken to have appeared, to the creditor at the date of the loan.\n(b) In considering whether interest is excessive under this section, the Court shall take into account any amounts charged or paid, whether in money or in kind, for expenses, inquiries, fines, bonuses, premia, renewals or any other charges, and if compound interest is charged, the periods at which it is calculated, and the total advantage which may reasonably be taken to have been expected from the transaction.\n(c) In considering the question of risk, the Court shall take into account the presence or absence of security and the value thereof, the financial condition of the debtor and the result of any previous transactions of the debtor, by way of loan, so far as the same were known, or must be taken to have been known, to the creditor."
+      },
+      {
+        "label": "P2",
+        "chunkId": "9a7e022b-25ca-4deb-a5a7-8f0a62584587",
+        "sourceTitle": "The Legal Services Authorities Act, 1987",
+        "sourceUrl": "https://patnahighcourt.gov.in/BSLSA/pdf/ActsRules/1.pdf",
+        "documentVersion": "Central text with amendments as printed in the source (amendment footnotes omitted). Income limits in section 12(h) are those set by the State Government; current Andhra Pradesh / Telangana limits are NOT included here.",
+        "sectionReference": "Section 12",
+        "content": "Legal Services Authorities Act, 1987 — Section 12: Criteria for giving legal services\n\nEvery person who has to file or defend a case shall be entitled to legal services under this Act if that person is--\n(a) a member of a Scheduled Caste or Scheduled Tribe;\n(b) a victim of trafficking in human beings or begar as referred to in article 23 of the Constitution;\n(c) a woman or a child; 4[(d) a person with disability as defined in clause (i) of section 2 of the Persons With Disabilities (Equal Opportunities, Protection of Rights and Full Participation) Act, 1995 (1 of 1996);]\n(e) a person under circumstances of underserved want such as being a victim of a mass disaster, ethnic, violence, caste atrocity, flood, drought, earthquake or industrial disaster; or\n(f) an industrial workman; or\n(g) in custody, including custody in a protective home within the meaning of clause (g) of section 2 of the Immoral Traffic (Prevention) Act, 1956 (104 of 1956), or in a juvenile home within the meaning of clause (j) of section 2 of the Juvenile Justice Act, 1986 (53 of 1986), or in a psychiatric hospital or psychiatric nursing home within the meaning of clause (g) of section 2 of the Mental Health Act, 1987 (14 of 1987); or\n1[(h) in receipt of annual income less than rupees nine thousand or such other higher amount as may be prescribed by the State Government, if the case is before a court other than the Supreme Court, and less than rupees twelve thousand or such other higher amount as may be prescribed by the Central Government, if the case is before the Supreme Court.]"
+      },
+      {
+        "label": "P3",
+        "chunkId": "9aebe4af-5232-4142-a1bc-cf94a181eb89",
+        "sourceTitle": "The Legal Services Authorities Act, 1987",
+        "sourceUrl": "https://patnahighcourt.gov.in/BSLSA/pdf/ActsRules/1.pdf",
+        "documentVersion": "Central text with amendments as printed in the source (amendment footnotes omitted). Income limits in section 12(h) are those set by the State Government; current Andhra Pradesh / Telangana limits are NOT included here.",
+        "sectionReference": "Section 13",
+        "content": "Legal Services Authorities Act, 1987 — Section 13: Entitlement of legal services\n\n(1) Persons who satisfy all or any of the criteria specified in section 12 shall be entitled to receive legal services provided that the concerned Authority is satisfied that such person has a prima facie case to prosecute or to defend.\n(2) An affidavit made by a person as to his income may be regarded as sufficient for making him eligible to the entitlement of legal services under this Act unless the concerned Authority has reason to disbelieve such affidavit."
+      },
+      {
+        "label": "P4",
+        "chunkId": "56de736e-14da-43d9-82c5-f96a4f6b3c10",
+        "sourceTitle": "The Usurious Loans Act, 1918",
+        "sourceUrl": "https://thc.nic.in/Central%20Governmental%20Acts%5CUsurious%20Loans%20Act,%201918..pdf",
+        "documentVersion": "Central text as modified up to 3 December 2018. Does NOT include the Andhra Pradesh amendment (A.P. Act 24 of 1961) noted in the Act's footnotes.",
+        "sectionReference": "Section 3 (part 2 of 2)",
+        "content": "Usurious Loans Act, 1918 — Section 3: Re-opening of transactions\n\n(d) In considering whether a transaction was substantially unfair, the Court shall take into account all circumstances materially affecting the relations of the parties at the time of the loan or tending to show that the transaction was unfair, including the necessities or supposed necessities of the debtor at the time of the loan so far as the same were known, or must be taken to have been known, to the creditor.\nExplanation.--Interest may of itself be sufficient evidence that the transaction was substantially unfair.\n(3) This section shall apply to any suit, whatever its form may be, if such suit is substantially one for the recovery of a loan or for the enforcement of any agreement or security in respect of a loan 2[or for the redemption of any such security].\n(4) Nothing in this section shall affect the rights of any transferee for value who satisfies the Court that the transfer to him was bona fide, and that he had at the time of such transfer no notice of any fact which would have entitled the debtor as against the lender to relief under this section. For the purposes of this sub-section, the word \"notice\" shall have the same meaning as is ascribed to it in section 4 of the Transfer of Property Act, 1882 (4 of 1882).\n(5) Nothing in this section shall be construed as derogating from the existing powers or jurisdiction of any Court."
+      },
+      {
+        "label": "P5",
+        "chunkId": "cdeab715-5097-48a6-b6c0-3f0eb30eaab6",
+        "sourceTitle": "The Usurious Loans Act, 1918",
+        "sourceUrl": "https://thc.nic.in/Central%20Governmental%20Acts%5CUsurious%20Loans%20Act,%201918..pdf",
+        "documentVersion": "Central text as modified up to 3 December 2018. Does NOT include the Andhra Pradesh amendment (A.P. Act 24 of 1961) noted in the Act's footnotes.",
+        "sectionReference": "Section 2",
+        "content": "Usurious Loans Act, 1918 — Section 2: Definitions\n\nIn this Act, unless there is anything repugnant in the subject or context,--\n(1) \"Interest\" means rate of interest and includes the return to be made over and above what was actually lent, whether the same is charged or sought to be recovered specifically by way of interest or otherwise.\n(2) \"Loan\" means a loan whether of money or in kind and includes any transaction which is, in the opinion of the Court, in substance a loan.\n(3) \"Suit to which this Act applies\" means any suit--\n(a) for the recovery of a loan made after the commencement of this Act; or\n(b) for the enforcement of any security taken or any agreement, whether by way of settlement of account or otherwise, made, after the commencement of this Act, in respect of any loan made either before or after the commencement of this Act; 4[or\n(c) for the redemption of any security given after the commencement of this Act in respect of any loan made either before or after the commencement of this Act.]"
+      },
+      {
+        "label": "P6",
+        "chunkId": "ff121835-a67b-4c0d-897b-0ae42ad0c3d5",
+        "sourceTitle": "The Usurious Loans Act, 1918",
+        "sourceUrl": "https://thc.nic.in/Central%20Governmental%20Acts%5CUsurious%20Loans%20Act,%201918..pdf",
+        "documentVersion": "Central text as modified up to 3 December 2018. Does NOT include the Andhra Pradesh amendment (A.P. Act 24 of 1961) noted in the Act's footnotes.",
+        "sectionReference": "Section 4",
+        "content": "Usurious Loans Act, 1918 — Section 4: Insolvency proceedings\n\nOn any application relating to the admission or amount of a proof of a loan in any insolvency proceedings, the Court may exercise the like powers as may be exercised under section 3 by a Court in a suit to which this Act applies."
+      },
+      {
+        "label": "P7",
+        "chunkId": "10d356f9-ac14-4080-a548-776b0de07653",
+        "sourceTitle": "The Usurious Loans Act, 1918",
+        "sourceUrl": "https://thc.nic.in/Central%20Governmental%20Acts%5CUsurious%20Loans%20Act,%201918..pdf",
+        "documentVersion": "Central text as modified up to 3 December 2018. Does NOT include the Andhra Pradesh amendment (A.P. Act 24 of 1961) noted in the Act's footnotes.",
+        "sectionReference": "Section 1",
+        "content": "Usurious Loans Act, 1918 — Section 1: Short title and extent\n\n(1) This Act may be called Usurious Loans Act, 1918. (2) It extends to the whole of India except 2 [the territories which, immediately before the 1st November, 1956, were comprised in Part B States] 3***.\n(3) The State Government may, by notification in the Official Gazette, direct that it shall not apply to any area, class of persons, or class of transactions which it may specify in its notification."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite",
+    "basedOnAnalysisAt": "2026-11-11T04:11:25.756248+00:00"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "ok": true,
+  "ms": 1536,
+  "output": {
+    "options_presented": [
+      {
+        "key": "clarification",
+        "title": "Clarification",
+        "involves": "Ask the lender for a written breakdown of how they calculated the amount they are demanding: the interest rate and method, any charges, and which of your payments they counted.",
+        "howWeHelp": "We tell you exactly what to ask for, based on your confirmed facts, and show you how to compare their answer with our calculation. (Ready-made letter drafts are coming soon.)",
+        "benefits": [
+          "Low cost and low risk.",
+          "Often uncovers mistakes or missing payments.",
+          "Creates a written record that helps if the dispute continues."
+        ],
+        "risks": [
+          "The lender may not reply, or may refuse to put anything in writing.",
+          "It does not by itself change what you owe."
+        ],
+        "needed": [
+          "Your loan details and the lender's current demand.",
+          "A list of your payments with dates."
+        ],
+        "drafts": [
+          "clarification_request"
+        ]
+      },
+      {
+        "key": "negotiation",
+        "title": "Negotiation",
+        "involves": "Try to agree a fair settlement amount or repayment schedule with the lender, recorded in writing.",
+        "howWeHelp": "We show the calculated figures that support your position and what a written agreement should say. (Ready-made letter drafts are coming soon.)",
+        "benefits": [
+          "Can end the dispute quickly.",
+          "Avoids the cost and time of formal steps."
+        ],
+        "risks": [
+          "Any agreement must be in writing, with a receipt for every payment.",
+          "Don't negotiate alone if you feel unsafe.",
+          "You may agree to pay more than a court might order."
+        ],
+        "needed": [
+          "The calculated balance and the lender's demand.",
+          "What you can realistically pay, and when."
+        ],
+        "drafts": [
+          "demand_letter"
+        ]
+      },
+      {
+        "key": "legal_action",
+        "title": "Legal action",
+        "involves": "Formal steps such as a legal notice, or a complaint to the appropriate authority. Going to court needs the right proceeding, court and documents.",
+        "howWeHelp": "We explain the verified legal provisions and organise your facts, calculation and evidence for a lawyer or legal aid. Nothing is ever filed automatically. (Notice and complaint drafts are coming soon.)",
+        "benefits": [
+          "Puts your position on formal record.",
+          "May lead to the dispute being decided by a court or authority."
+        ],
+        "risks": [
+          "Takes time and may cost money; outcomes are never guaranteed.",
+          "Time limits may apply — get advice early.",
+          "A lawyer or legal aid should check any notice or complaint before it is sent."
+        ],
+        "needed": [
+          "Confirmed facts and calculation.",
+          "Your documents and evidence.",
+          "Advice on the right authority or court."
+        ],
+        "drafts": [
+          "legal_notice_draft",
+          "complaint_draft"
+        ]
+      },
+      {
+        "key": "legal_assistance",
+        "title": "Legal assistance",
+        "involves": "Get help from a lawyer, or from your District Legal Services Authority, which may provide free legal aid if you are eligible.",
+        "howWeHelp": "We prepare a clear case summary, calculation and document list you can take to your first meeting.",
+        "benefits": [
+          "A professional checks your case and options.",
+          "Free legal aid is available to eligible people."
+        ],
+        "risks": [
+          "Free legal aid depends on eligibility criteria and your state's income limit.",
+          "Private lawyers charge fees."
+        ],
+        "needed": [
+          "Your case summary and calculation.",
+          "Copies of your documents.",
+          "Proof of identity (show it in person; never share Aadhaar numbers online)."
+        ],
+        "drafts": []
+      }
+    ],
+    "suggestion": {
+      "recommended": "clarification",
+      "reasons": [
+        "The lender is asking for ₹95,000, which is ₹56,411.55 more than even the highest of our calculations. Asking for their written breakdown is a low-risk first step."
+      ],
+      "alsoConsider": [
+        "legal_assistance",
+        "negotiation"
+      ],
+      "alerts": [
+        "If you have received a court summons, a legal notice or any document with a deadline, contact legal aid or a lawyer immediately — deadlines can't wait for the other steps."
+      ]
+    },
+    "path_chosen_for_this_run": "clarification",
+    "action_plan_steps": [
+      {
+        "id": "organise-evidence",
+        "title": "Organise your evidence",
+        "detail": "No documents are uploaded yet. Look for: loan agreement or promissory note; proof of money received; repayment receipts or records; bank / upi statements; messages with the lender (whatsapp, sms); lender's written demand. Missing items don't stop you, but they make your account easier to dispute. Keep originals safe and work from copies.",
+        "link": {
+          "segment": "documents",
+          "label": "Documents & evidence"
+        },
+        "done": false
+      },
+      {
+        "id": "request-breakdown",
+        "title": "Ask the lender for a written breakdown",
+        "detail": "Ask how they reached ₹95,000: the interest rate and method, the dates used, any charges, and every payment of yours they have counted.",
+        "link": {
+          "segment": "summary",
+          "label": "Your confirmed details"
+        },
+        "done": false
+      },
+      {
+        "id": "send-with-proof",
+        "title": "Send it in a way you can prove",
+        "detail": "Use registered post or a written message (such as WhatsApp) and keep a copy and the delivery proof. Stay polite and stick to facts.",
+        "done": false
+      },
+      {
+        "id": "compare",
+        "title": "Compare their answer with our calculation",
+        "detail": "Our calculation is between ₹34,800 and ₹38,588.45 on 11 Nov 2026, depending on the agreed terms. Check whether they missed any payment, used a higher rate, compounded interest, or added charges.",
+        "link": {
+          "segment": "financial",
+          "label": "Financial analysis"
+        },
+        "done": false
+      },
+      {
+        "id": "no-new-papers",
+        "title": "Don't sign anything new while the amount is unclear",
+        "detail": "Avoid signing blank papers, new promissory notes or cheques until the amount is clear.",
+        "done": false
+      },
+      {
+        "id": "review",
+        "title": "Keep your case up to date",
+        "detail": "If anything changes — new payments, new demands, new messages — add it in the chat or case summary and recalculate.",
+        "link": {
+          "segment": "summary",
+          "label": "Case summary"
+        },
+        "done": false
+      }
+    ]
+  }
+}

@@ -15,6 +15,7 @@
     "test:integration": "node --env-file=.env.local ./node_modules/vitest/vitest.mjs run -c vitest.integration.config.mts",
     "db:push": "node --env-file=.env.local scripts/db-push.mjs",
     "samples": "node scripts/make-sample-docs.mjs",
+    "raw:outputs": "node --env-file=.env.local ./node_modules/vitest/vitest.mjs run -c vitest.raw.config.mts",
     "legal:extract": "node scripts/legal-extract.mjs",
     "legal:ingest": "node --env-file=.env.local scripts/legal-ingest.mjs",
     "legal:verify": "node --env-file=.env.local scripts/legal-verify.mjs",
